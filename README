@@ -1,0 +1,20 @@
+
+# Different Branches for different purposes
+
+## branch ruby-dsl
+Email crash course on Building Ruby DSLs written by Jim Gay.
+
+Before you start, gather your team and information and discuss the goals of your
+code. Write down your answers and come back to them later as you develop your
+DSL.
+
+* What concepts do you need to capture? In addition, what barriers does plain Ruby
+code create for easily understanding the concepts in your code? Can you avoid
+writing a DSL?
+* How are each of the concepts related? For the concepts in your system, how do
+they interact with each other? You should consider how one line of code affects
+the next.
+* How does you system deviate from a standard approach? In other words, if you
+create a standard way of doing things, now is the time to imagine how your
+solution should be able to grow to support additional individual needs.
+
