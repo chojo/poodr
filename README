@@ -1,6 +1,13 @@
 
 # Different Branches for different purposes
 
+## branch creating-gem
+building a gem named Lottotip. This gem will make it easy generate lottery
+numbers.
+
+
+
+
 ## branch ruby-dsl
 Email crash course on Building Ruby DSLs written by Jim Gay.
 
