@@ -9,10 +9,6 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Joon Ki Choi"]
   spec.email         = ["chojo@eda.admin.ch"]
 
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "https://rubygems.org"
-  end
-
   spec.summary       = %q{EDA Workshop Project}
   spec.description   = %q{Workshop for my colleagues at EDA: How to develop a gem.}
 #  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
