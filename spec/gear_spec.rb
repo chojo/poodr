@@ -1,9 +1,10 @@
 require_relative '../lib/gear'
+require_relative '../lib/wheel'
 
 describe Gear do
-  let(:gear)           { Gear.new(52, 11, 29, 2.1) }
-  let(:wheel_diameter) { gear.rim + ( 2 * gear.tire ) }
-  let(:gear_inches)    { wheel_diameter * gear.ratio }
+  let(:wheel)           { Wheel.new(26, 2.1) }
+  let(:gear)           { Gear.new(52, 11, wheel) }
+  let(:gear_inches)    { wheel.diameter * gear.ratio }
 
   describe "#ratio" do
     it "returns the ratio of chainring and cog" do
@@ -13,8 +14,7 @@ describe Gear do
   
   describe "#gear_inches" do
     it "returns the gear inches" do
-      # expect(gear.gear_inches).to eq(gear.ratio * ((gear.tire * 2) + gear.rim))
-      expect(gear.gear_inches).to eq(156.94545454545457)
+      expect(gear.gear_inches).to eq(142.76363636363638)
     end
   end
 end
