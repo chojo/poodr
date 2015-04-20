@@ -1,14 +1,17 @@
 class Gear 
   attr_reader :chainring, :cog, :wheel
-  def initialize(chainring, cog, wheel)
-    @chainring = chainring
-    @cog = cog
-    @rim = rim
-    @tire = tire
+  # remove argument-order dependencies
+  def initialize(args)
+    @chainring = args[:chainring]
+    @cog = args[:cog]
+    @rim = args[:rim]
+    @wheel = args[:wheel]
   end
 
-# Gear expects a 'Duck' that knows 'diameter'
-# Gear.new(52, 11, Wheel.new(26, 1.5)).gear_inches
+  # Gear.new(
+  #   chainring: 52,
+  #   cog: 11,
+  #   wheel: Wheel.new(26, 1.5)).gear_inches
 
 # isolate dependencies
 # if it's not always possible to break all unnecessary dependencies then you
