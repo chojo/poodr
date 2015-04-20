@@ -7,15 +7,6 @@ class Gear
     @tire = tire
   end
 
-  def gear_inches
-    ratio * wheel.diameter
-  end
-
-  def ratio
-    chainring / cog.to_f
-  end
-end
-
 # Gear expects a 'Duck' that knows 'diameter'
 # Gear.new(52, 11, Wheel.new(26, 1.5)).gear_inches
 
@@ -28,3 +19,20 @@ end
 #   @wheel = Wheel.new(rim, tire)
 # end
 #
+
+
+  def gear_inches
+    #ratio * wheel.diameter # this is a simple method and it contains Gear's only reference to wheel.diameter. But in a more complex situation where wheel.diameter is embedded deeply inside a complex method increases its vulnerability. Better:
+    # ... a few lines of scary math
+    ratio * diameter
+    # ... more lines of scary math
+  end
+
+  def diameter
+    wheel.diameter
+  end  
+
+  def ratio
+    chainring / cog.to_f
+  end
+end
